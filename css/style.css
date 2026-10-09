@@ -1,0 +1,16 @@
+/* Header */
+header {
+  text-align: center;
+}
+
+/* navigation links */
+a.navigation {
+  margin: 0 15px;
+}
+
+/* home link */
+a.home {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
