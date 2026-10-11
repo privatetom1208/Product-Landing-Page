@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- meta information -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Thomas Mairella">
+        <meta name="description" content="Reserve a cozy table at Cozy Cafe.">
+        <title>Reserve Now!</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="icon" type="image/svg+xml" href="../images/icon.svg">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- header for page -->
+        <header>
+            <h1><a href="../index.html" class="home">Cozy Cafe</a></h1>
+            <nav>
+                <a href="../pages/menu.html" class="navigation">Menu</a>
+                <a href="../pages/reserve.html" class="navigation">Reservations</a>
+                <a href="../pages/contact.html" class="navigation">Contact Us</a>
+            </nav>
+            <hr>
+        </header>
+
+        <h1 class="pagehead">Reserve Your Cozy Table</h1>
+
+        <!-- reservation information -->
+        <main class="reservation-container">
+            <h2>Cozy Cafe Table Reservation</h2>
+            <p>We would love to welcome you in for coffee, brunch, or a relaxed evening with us.</p>
+
+            <!-- The action redirects to the confirmation page on completion -->
+            <form action="confirmation.html" method="post">
+                <!-- Section: Personal Information -->
+                <section>
+                    <h3>1. Personal Information</h3>
+                    <p>
+                        <label for="first-name">First Name:</label><br>
+                        <input type="text" id="first-name" name="firstName" required>
+                    </p>
+                    <p>
+                        <label for="last-name">Last Name:</label><br>
+                        <input type="text" id="last-name" name="lastName" required>
+                    </p>
+                    <p>
+                        <label for="email">Email Address:</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+                    <p>
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" id="phone" name="phone" required>
+                    </p>
+                </section>
+
+                <!-- Section: Reservation Details -->
+                <section>
+                    <h3>2. Reservation Details</h3>
+                    <p>
+                        <label for="visit-date">Date of Reservation:</label><br>
+                        <input type="date" id="visit-date" name="visitDate" required>
+                    </p>
+                    <p>
+                        <label for="reservation-time">Reservation Time:</label><br>
+                        <input type="time" id="reservation-time" name="reservationTime" required>
+                    </p>
+                    <p>
+                        <label for="party-size">Party Size:</label><br>
+                        <select id="party-size" name="partySize">
+                            <option value="1">1 Person</option>
+                            <option value="2" selected>2 People</option>
+                            <option value="3-4">3 - 4 People</option>
+                            <option value="5-6">5 - 6 People</option>
+                            <option value="7+">7+ People (Large Group)</option>
+                        </select>
+                    </p>
+                    <p>
+                        <strong>Seating Preference:</strong><br>
+                        <input type="radio" id="indoor" name="seating" value="indoor" checked>
+                        <label for="indoor">Indoor Dining</label><br>
+                        <input type="radio" id="patio" name="seating" value="patio">
+                        <label for="patio">Outdoor Patio</label><br>
+                        <input type="radio" id="bar" name="seating" value="bar">
+                        <label for="bar">Bar Area</label>
+                    </p>
+                    <p>
+                        <strong>Special Services / Add-ons:</strong><br>
+                        <input type="checkbox" id="highchair" name="addons" value="highchair">
+                        <label for="highchair">High Chair Needed</label><br>
+                        <input type="checkbox" id="celebration" name="addons" value="celebration">
+                        <label for="celebration">Special Occasion / Birthday</label>
+                    </p>
+                    <p>
+                        <label for="notes">Dietary Restrictions or Special Requests:</label><br>
+                        <textarea id="notes" name="notes" rows="4" cols="40" placeholder="Enter any allergies, preferences, or extra details here..."></textarea>
+                    </p>
+                </section>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Complete Reservation</button>
+            </form>
+        </main>
+
+        <!-- footer for page -->
+        <footer>
+            <hr>
+            <p class="copyright">Created by Thomas Mairella. &copy; 2026 All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>
